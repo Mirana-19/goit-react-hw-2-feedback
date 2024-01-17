@@ -13,6 +13,7 @@ export const Button = styled.button`
   background-color: lightblue;
   border-radius: 5px;
   border: 1px solid black;
+  text-transform: capitalize;
 `;
 
 export const StatList = styled.ul`
