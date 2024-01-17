@@ -1,20 +1,21 @@
 import { nanoid } from 'nanoid';
+import { Item, Key, Stat, StatList } from './Feedback.styled';
 
 export const Statistics = ({ stats, total, positivePercentage }) => {
   return (
     <>
-      <ul>
+      <StatList>
         {stats.map(([key, value]) => (
-          <li key={nanoid()}>
+          <Item key={nanoid()}>
             <p>
-              <span>{key}</span>
+              <Key>{key}: </Key>
               <span>{value}</span>
             </p>
-          </li>
+          </Item>
         ))}
-      </ul>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}</p>
+      </StatList>
+      <Stat>Total: {total}</Stat>
+      <Stat>Positive feedback: {positivePercentage}</Stat>
     </>
   );
 };
